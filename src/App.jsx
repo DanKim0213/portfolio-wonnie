@@ -1,5 +1,5 @@
-import { Nav } from "./components";
 import {
+  Header,
   CustomerReviews,
   Footer,
   Hero,
@@ -13,8 +13,7 @@ import {
 const App = () => {
   return (
     <>
-      {/* TODO: You could solve responsive error by removing and appending the problem tags */}
-      <Nav />
+      <Header />
       <main>
         <Hero />
         <PopularProducts />

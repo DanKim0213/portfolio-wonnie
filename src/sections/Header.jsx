@@ -1,10 +1,13 @@
 import { hamburger } from "../assets/icons";
 import { headerLogo } from "../assets/images";
 import { navLinks } from "../constants";
+import useStickyHeader from "../hooks/useStickyHeader";
 
-const Nav = () => {
+const Header = () => {
+  const { stickyStyle } = useStickyHeader();
+
   return (
-    <header>
+    <header className={stickyStyle}>
       <nav className="flex items-center justify-between">
         <a href="/">
           <img src={headerLogo} alt="logo" className="h-[29px] w-[129px]" />
@@ -38,4 +41,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Header;
