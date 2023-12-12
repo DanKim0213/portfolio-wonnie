@@ -3,7 +3,7 @@ import { Button } from "../components";
 
 const SuperQuality = () => {
   return (
-    <section id="about-us" className="block gap-10 lg:flex">
+    <section id="about-me" className="block gap-10 lg:flex">
       <div className="flex-1">
         <h2 className="font-palanquin text-4xl font-bold capitalize lg:max-w-lg">
           We Provide You

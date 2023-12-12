@@ -5,8 +5,6 @@ import {
   Hero,
   PopularProducts,
   Services,
-  SpecialOffer,
-  Subscribe,
   SuperQuality,
 } from "./sections";
 
@@ -19,9 +17,7 @@ const App = () => {
         <PopularProducts />
         <SuperQuality />
         <Services />
-        <SpecialOffer />
         <CustomerReviews />
-        <Subscribe />
       </main>
       <Footer />
     </>
