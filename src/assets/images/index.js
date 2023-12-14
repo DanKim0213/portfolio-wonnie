@@ -21,7 +21,30 @@ import thumbnailShoe1 from './thumbnail-shoe1.svg'
 import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
+import days1 from './days1.png';
+import days2 from './days2.png';
+import days3 from './days3.png';
+
+import auctopus1 from './auctopus1.png'
+import auctopus2 from './auctopus2.png'
+import auctopus3 from './auctopus3.png'
+
+import toonbti1 from './toonbti1.png';
+import toonbti2 from './toonbti2.png';
+import toonbti3 from './toonbti3.png';
+
+
+
 export {
+    days1,
+    days2,
+    days3,
+    toonbti1,
+    toonbti2,
+    toonbti3,
+    auctopus1,
+    auctopus2,
+    auctopus3,
     bigShoe1,
     bigShoe2,
     bigShoe3,

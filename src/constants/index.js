@@ -1,12 +1,58 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { days1, days2, days3, auctopus1, auctopus2, auctopus3, bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, toonbti1, toonbti2, toonbti3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#products", label: "Products" },
+    { href: "#projects", label: "Projects" },
     { href: "#about-me", label: "About Me" },
     { href: "#reviews", label: "Reviews" },
 ];
+
+export const days = [
+    {
+        id: 'days1',
+        thumbnail: days1
+    },
+    {
+        id: 'days2',
+        thumbnail: days2
+    },
+    {
+        id: 'days3',
+        thumbnail: days3
+    }
+    
+];
+
+export const toonbti = [
+    {
+        id: "toonbti1",
+        thumbnail: toonbti1 
+    },
+    {
+        id: "toonbti2",
+        thumbnail: toonbti2 
+    },
+    {
+        id: "toonbti3",
+        thumbnail: toonbti3 
+    },
+]
+
+export const auctopus = [
+    {
+        id: 'auctopus1',
+        thumbnail: auctopus1
+    },
+    {
+        id: 'auctopus2',
+        thumbnail: auctopus2
+    },
+    {
+        id: 'auctopus3',
+        thumbnail: auctopus3
+    }
+]
 
 export const shoes = [
     {
@@ -29,6 +75,36 @@ export const statistics = [
     { value: '250k+', label: 'Customers' },
 ];
 
+export const products2 = [
+    {
+        imgURL: toonbti1,
+        name: "TooNBTI",
+        price: "웹툰 취향 MBTI",
+        product: toonbti,
+        stars: 4
+    },
+    {
+        imgURL: auctopus1,
+        name: "Auctopus",
+        price: "중고거래 플랫폼",
+        product: auctopus,
+        stars: 3.5 
+    },
+    {
+        imgURL: days1,
+        name: "66 Days",
+        price: "습관 형성 리마인더",
+        product: days,
+        stars: 3.5
+    },
+    {
+        imgURL: auctopus1,
+        name: "Auctopus2",
+        price: "중고거래 플랫폼",
+        product: auctopus,
+        stars: 3.5
+    },
+];
 export const products = [
     {
         imgURL: shoe4,

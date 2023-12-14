@@ -4,7 +4,7 @@ const useStickyHeader = () => {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-  const stickyStyle = `fixed z-50 top-0 transition-transform duration-300 ${
+  const stickyStyle = `fixed z-20 top-0 transition-transform duration-300 ${
     isScrollingUp ? "transform-translate-y-0" : "-translate-y-full"
   } `;
 

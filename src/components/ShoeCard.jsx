@@ -1,7 +1,7 @@
 const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
   const handleClick = () => {
-    if (bigShoeImg !== imgURL.bigShoe) {
-      changeBigShoeImage(imgURL.bigShoe);
+    if (bigShoeImg !== imgURL.thumbnail) {
+      changeBigShoeImage(imgURL.thumbnail);
     }
   };
 
@@ -12,7 +12,7 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
     >
       <div
         className={`rounded-xl ring-inset ring-coral-red ${
-          bigShoeImg === imgURL.bigShoe && "ring-2"
+          bigShoeImg === imgURL.id && "ring-2"
         } h-[20vw] w-[20vw] cursor-pointer bg-card bg-cover bg-center p-4 lg:h-40 lg:w-40`}
       >
         <img
