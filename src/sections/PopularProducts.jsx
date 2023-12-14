@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { toonbti, products2 } from "../constants";
+import { projects } from "../constants";
 import { PopularProductCard } from "../components";
 import Modal from "../components/ProjectModal";
 import { useState } from "react";
@@ -7,7 +7,8 @@ import { useState } from "react";
 // import {  toonbti1, toonbti2, toonbti3,  } from "../assets/images";
 
 const PopularProducts = () => {
-  const [screenshots, setScreenshots] = useState(toonbti);
+  const [title, setTitle] = useState(projects[0].name)
+  const [screenshots, setScreenshots] = useState(projects[0]);
   const [isOpen, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
   const openModal = () => setOpen(true);
@@ -38,14 +39,15 @@ const PopularProducts = () => {
         </p>
       </div>
       <div className="mt-16 grid grid-cols-1 gap-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {products2.map((product) => (
-          <PopularProductCard key={product.name} {...product} onClick={() => {
-            setScreenshots(product.product)
-            openModal()
+        {projects.map((project) => (
+          <PopularProductCard key={project.name} {...project} onClick={() => {
+            setTitle(project.name);
+            setScreenshots(project.product);
+            openModal();
           }} />
         ))}
       </div>
-        <Modal isOpen={isOpen} onClose={closeModal} screenshots={screenshots}  />
+        <Modal isOpen={isOpen} onClose={closeModal} screenshots={screenshots} title={title}  />
     </section>
   );
 };

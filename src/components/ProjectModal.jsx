@@ -1,31 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { ShoeCard } from '../components/index'
+import { BiAlignLeft } from "react-icons/bi";
 
-// interface ModalProps {
-//   isOpen?: boolean;
-//   onClose: () => void;
-//   onSubmit: () => void;
-//   title?: string;
-//   body?: React.ReactElement;
-//   footer?: React.ReactElement;
-//   actionLabel: string;
-//   disabled?: boolean;
-//   secondaryAction?: () => void;
-//   secondaryActionLabel?: string;
-// }
-
-// import { toonbti1 } from "../constants";
-// import { toonbti } from "../constants";
-// import { toonbti1 } from "../assets/images";
-
-const Modal = ({ isOpen, onClose, disabled, screenshots }) => {
-  const [screenshot, setScreenshot] = useState(undefined)
+const Modal = ({ isOpen, onClose, disabled, screenshots, title }) => {
+  const [thumbnail, setThumbnail] = useState(screenshots[0].thumbnail)
   const [showModal, setShowModal] = useState(isOpen);
   
   useEffect(() => {
-    setScreenshot(screenshots[0].thumbnail);
-  }, [screenshots]);
+    setThumbnail(screenshots[0].thumbnail);
+  }, [screenshots])
 
   useEffect(() => {
     setShowModal(isOpen);
@@ -121,15 +105,20 @@ const Modal = ({ isOpen, onClose, disabled, screenshots }) => {
                   <IoMdClose size={18} />
                 </button>
                 <div className="text-lg font-semibold">
-    {/* TODO: set title */}
-                  hoi
+                  {title}
                 </div>
               </div>
               {/*body*/}
               <div className="relative p-6 pb-20 flex-auto">
                 <div className="relative flex justify-center bg-primary bg-hero bg-cover bg-center py-10 px-1 h-[75vh]">
+                  <div className="absolute top-4 right-4 rounded-full shadow-xl bg-white p-2 cursor-pointer group hover:rounded-xl ">
+                    <BiAlignLeft size={24} className="group-hover:hidden text-slate-gray" />
+                    <p className="group-hover:block hidden text-slate-gray">
+                      (한글 소개) Experience top-notch quality and style with our sought-after selections. Discover a world of comfort, design, and value
+                    </p>
+                  </div>
                   <img
-                    src={screenshot}
+                    src={thumbnail}
                     alt="shoe colletion"
                     className="object-contain w-[100%] h-[100%]"
                   />
@@ -139,8 +128,8 @@ const Modal = ({ isOpen, onClose, disabled, screenshots }) => {
                         key={index}
                         index={index}
                         imgURL={image}
-                        changeBigShoeImage={(shot) => setScreenshot(shot)}
-                        bigShoeImg={screenshot}
+                        changeBigShoeImage={(shot) => setThumbnail(shot)}
+                        bigShoeImg={thumbnail}
                       />
                     ))}
                   </div>

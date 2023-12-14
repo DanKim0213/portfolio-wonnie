@@ -1,5 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { days1, days2, days3, auctopus1, auctopus2, auctopus3, bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, toonbti1, toonbti2, toonbti3 } from "../assets/images";
+import { days1, days2, days3, auctopus1, auctopus2, auctopus3, bigShoe1, bigShoe2, bigShoe3, customer1, customer2, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, toonbti1, toonbti2, toonbti3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -75,7 +75,7 @@ export const statistics = [
     { value: '250k+', label: 'Customers' },
 ];
 
-export const products2 = [
+export const projects = [
     {
         imgURL: toonbti1,
         name: "TooNBTI",
@@ -103,28 +103,6 @@ export const products2 = [
         price: "중고거래 플랫폼",
         product: auctopus,
         stars: 3.5
-    },
-];
-export const products = [
-    {
-        imgURL: shoe4,
-        name: "Nike Air Jordan-01",
-        price: "$200.20",
-    },
-    {
-        imgURL: shoe5,
-        name: "Nike Air Jordan-10",
-        price: "$210.20",
-    },
-    {
-        imgURL: shoe6,
-        name: "Nike Air Jordan-100",
-        price: "$220.20",
-    },
-    {
-        imgURL: shoe7,
-        name: "Nike Air Jordan-001",
-        price: "$230.20",
     },
 ];
 
