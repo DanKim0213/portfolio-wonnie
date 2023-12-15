@@ -1,7 +1,5 @@
 
 import { statistics } from "../constants";
-import { Button } from "../components";
-import { arrowRight } from "../assets/icons";
 import { TypeAnimation } from 'react-type-animation';
 
 const readme = <div>&#123;<br />
@@ -54,7 +52,6 @@ const Hero = () => {
           (한글소개) Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
-        <Button label="Shop now" iconURL={arrowRight} />
         <div className="mt-20 flex flex-wrap items-start justify-start gap-16">
           {statistics.map((stat, index) => (
             <div key={index}>

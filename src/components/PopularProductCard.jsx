@@ -2,7 +2,7 @@ import { star } from "../assets/icons";
 
 const PopularProductCard = ({ imgURL, name, price, stars, onClick }) => {
   return (
-    <div onClick={onClick} className=" hover:cursor-pointer ">
+    <div onClick={onClick} className=" hover:cursor-pointer hover:shadow-xl rounded-xl p-2 transition duration-300 ">
       <div className="h-[320px] w-[240px]">
         <img src={imgURL} alt={name} className="h-[100%] w-[100%]" />
       </div>

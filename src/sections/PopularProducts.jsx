@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const PopularProducts = () => {
   const [title, setTitle] = useState(projects[0].name)
-  const [screenshots, setScreenshots] = useState(projects[0]);
+  const [screenshots, setScreenshots] = useState(projects[0].product);
   const [isOpen, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
   const openModal = () => setOpen(true);

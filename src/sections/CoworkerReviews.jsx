@@ -1,17 +1,17 @@
 import { ReviewCard } from "../components";
 import { reviews } from "../constants";
 
-const CustomerReviews = () => {
+const CoworkerReviews = () => {
   return (
-    <section id="reviews" className="bg-pale-blue ">
+    <section id="reviews" >
       <h3 className="text-center font-palanquin text-4xl font-bold">
-        What Our
-        <span className="text-coral-red"> Customers </span>
+        What My
+        <span className="text-coral-red"> Coworkers </span>
         Say?
       </h3>
-      <p className="info-text m-auto mt-4  max-w-lg text-center">
-        Hear genuine stories from our satisfied customers about their
-        exceptional experiences with us.
+      <p className="info-text m-auto mt-4 text-center">
+        저와 함께 프론트엔드 개발자로서 <br />
+        2023년을 같이 고생한 SSAFY 동료들의 리뷰입니다.   
       </p>
 
       <div className="mt-24 flex flex-col items-center justify-evenly gap-14 lg:flex-row">
@@ -29,4 +29,4 @@ const CustomerReviews = () => {
   );
 };
 
-export default CustomerReviews;
+export default CoworkerReviews;

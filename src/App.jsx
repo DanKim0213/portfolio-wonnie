@@ -1,6 +1,6 @@
 import {
   Header,
-  CustomerReviews,
+  CoworkerReviews,
   Footer,
   Hero,
   PopularProducts,
@@ -17,7 +17,7 @@ const App = () => {
         <PopularProducts />
         <SuperQuality />
         <Services />
-        <CustomerReviews />
+        <CoworkerReviews />
       </main>
       <Footer />
     </>

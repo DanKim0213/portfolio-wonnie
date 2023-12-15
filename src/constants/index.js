@@ -1,5 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { days1, days2, days3, auctopus1, auctopus2, auctopus3, bigShoe1, bigShoe2, bigShoe3, customer1, customer2, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, toonbti1, toonbti2, toonbti3 } from "../assets/images";
+import { days1, days2, days3, auctopus1, auctopus2, auctopus3, bigShoe1, bigShoe2, bigShoe3, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, toonbti1, toonbti2, toonbti3 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -126,16 +126,16 @@ export const services = [
 
 export const reviews = [
     {
-        imgURL: customer1,
-        customerName: 'Morich Brown',
+        imgURL: "https://avatars.githubusercontent.com/u/89833631?v=4",
+        customerName: '노현정, SSAFY 2학기 특화 프로젝트',
         rating: 4.5,
-        feedback: "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!"
+        feedback: "프론트 팀장으로서 팀원들이 도움이 필요할 때 도와주려고 함께 고민한다. 긍정적 마인드로 항상 팀원들을 응원하며, 소수의 팀원들의 의견일지라도 경청하고 팀원들 간의 논쟁을 조율하려고 노력한다"
     },
     {
-        imgURL: customer2,
-        customerName: 'Lota Mongeskar',
+        imgURL: "https://avatars.githubusercontent.com/u/55757379?v=4",
+        customerName: '성다연, SSAFY 2학기 자율 프로젝트',
         rating: 4.5,
-        feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
+        feedback: "제 상황을 모두 고려해주시고 꼼꼼하게 코드 리뷰를 해주시며 기술적인 어려움이 있으면 적극적으로 가르쳐주셔서 같은 프론트엔드 개발 팀원으로서 많이 의지가 되고 든든했습니다."
     }
 ];
 
