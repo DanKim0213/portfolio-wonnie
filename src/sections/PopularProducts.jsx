@@ -28,17 +28,16 @@ const PopularProducts = () => {
 }, [isOpen]);
 
   return (
-    <section id="projects">
+    <section id="projects" >
       <div className="flex flex-col gap-5">
         <h2 className="font-palanquin text-4xl font-bold">
           My <span className="text-coral-red"> Popular </span> Projects
         </h2>
         <p className="mt-2 font-montserrat text-slate-gray ">
-          (한글 소개) Experience top-notch quality and style with our sought-after
-          selections. Discover a world of comfort, design, and value
+          프론트엔드 스킬을 꾸준히 기르며 발전하고 있습니다. 제가 참여한 프로젝트를 소개합니다.
         </p>
       </div>
-      <div className="mt-16 grid grid-cols-1 gap-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="my-16 grid grid-cols-1 gap-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {projects.map((project) => (
           <PopularProductCard key={project.name} {...project} onClick={() => {
             setTitle(project.name);
@@ -47,7 +46,7 @@ const PopularProducts = () => {
           }} />
         ))}
       </div>
-        <Modal isOpen={isOpen} onClose={closeModal} screenshots={screenshots} title={title}  />
+      <Modal isOpen={isOpen} onClose={closeModal} screenshots={screenshots} title={title}  />
     </section>
   );
 };

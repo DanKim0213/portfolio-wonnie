@@ -3,7 +3,7 @@ import { reviews } from "../constants";
 
 const CoworkerReviews = () => {
   return (
-    <section id="reviews" >
+    <section id="reviews">
       <h3 className="text-center font-palanquin text-4xl font-bold">
         What My
         <span className="text-coral-red"> Coworkers </span>

@@ -1,5 +1,3 @@
-
-import { statistics } from "../constants";
 import { TypeAnimation } from 'react-type-animation';
 
 const readme = <div>&#123;<br />
@@ -37,9 +35,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex min-h-screen flex-col justify-center gap-10 xl:gap-0 xl:flex-row"
+      className="px-0 pb-0 flex min-h-screen flex-col justify-center gap-10 xl:gap-0 xl:flex-row"
     >
-      <div className="flex flex-col items-start justify-center pt-28 flex-1">
+      <div className="flex flex-col items-start justify-center flex-1 mx-8 sm:mx-16 ">
         <p className="font-montserrat text-xl text-coral-red">
           Hello, World! 
         </p>
@@ -48,20 +46,13 @@ const Hero = () => {
           <br />
           <span className="text-coral-red">Wonnie</span> 
         </h1>
-        <p className="mb-14 mt-6 max-w-sm font-montserrat text-lg text-slate-gray">
-          (한글소개) Discover stylish Nike arrivals, quality comfort, and innovation for
-          your active life.
+        <p className="mb-14 mt-6 max-w-sm font-montserrat text-2xl leading-8 text-slate-gray ">
+          변치않는 꾸준함으로<br />
+          변하는 세상에 적응하는<br /> 
+          프론트엔드 개발자 김태원입니다 👋
         </p>
-        <div className="mt-20 flex flex-wrap items-start justify-start gap-16">
-          {statistics.map((stat, index) => (
-            <div key={index}>
-              <p className="font-palanquin text-4xl font-bold">{stat.value}</p>
-              <p className="font-montserrat  text-slate-gray">{stat.label}</p>
-            </div>
-          ))}
-        </div>
       </div>
-      <div className="flex justify-center items-center bg-primary bg-hero bg-cover bg-center py-40 flex-1 text-xl">
+      <div className="px-8 sm:px-16 flex justify-center items-center bg-primary bg-hero bg-cover bg-center py-40 flex-1 text-xl">
         {readme}  
       </div>
     </section>

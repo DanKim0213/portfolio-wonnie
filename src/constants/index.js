@@ -109,17 +109,17 @@ export const projects = [
 export const services = [
     {
         imgURL: truckFast,
-        label: "Free shipping",
+        label: "긍정적인 생각",
         subtext: "Enjoy seamless shopping with our complimentary shipping service."
     },
     {
         imgURL: shieldTick,
-        label: "Secure Payment",
+        label: "책임감",
         subtext: "Experience worry-free transactions with our secure payment options."
     },
     {
         imgURL: support,
-        label: "Love to help you",
+        label: "솔선수범",
         subtext: "Our dedicated team is here to assist you every step of the way."
     },
 ];

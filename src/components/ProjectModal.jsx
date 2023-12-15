@@ -111,11 +111,18 @@ const Modal = ({ isOpen, onClose, disabled, screenshots, title }) => {
               {/*body*/}
               <div className="relative p-6 pb-20 flex-auto">
                 <div className="relative flex justify-center bg-primary bg-hero bg-cover bg-center py-10 px-1 h-[75vh]">
-                  <div className="absolute top-4 right-4 rounded-full shadow-xl bg-white p-2 cursor-pointer group hover:rounded-xl ">
-                    <BiAlignLeft size={24} className="group-hover:hidden text-slate-gray" />
-                    <p className="group-hover:block hidden text-slate-gray">
+                  <div className="absolute top-4 right-4 rounded-full shadow-xl bg-white p-2 group hover:rounded-xl hover:p-4 ">
+                    <BiAlignLeft size={24} className="group-hover:hidden text-slate-gray hover:cursor-pointer" />
+                    <div className="group-hover:block hidden text-slate-gray">
+                    <p>
                       (한글 소개) Experience top-notch quality and style with our sought-after selections. Discover a world of comfort, design, and value
                     </p>
+                      <a className="rounded-full px-4 py-2 bg-coral-red no-underline text-white transition hover:shadow-xl" 
+                        href="https://github.com/dankim0213" 
+                        target="_blank" rel="noreferrer">
+                          보러가기
+                      </a>
+                    </div>
                   </div>
                   <img
                     src={thumbnail}
