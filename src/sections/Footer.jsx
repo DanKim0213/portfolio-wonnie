@@ -1,25 +1,20 @@
 import { copyrightSign } from "../assets/icons";
-import { footerLogo } from "../assets/images";
 import { socialMedia } from "../constants";
+import { BiCheckDouble} from 'react-icons/bi';
 
 const Footer = () => {
   return (
     <footer>
       <div className="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col">
         <div className="flex flex-col items-start">
-          <a href="/">
-            <img
-              src={footerLogo}
-              alt="logo"
-              width={150}
-              height={46}
-              className="m-0"
-            />
-          </a>
-          <p className="mt-6 font-montserrat text-base leading-7 text-white-400 sm:max-w-sm">
+        <a href="/" className="flex gap-4 items-center text-white font-bold text-lg">
+          <BiCheckDouble size={50}  />
+          WONNIE
+        </a>
+          {/* <p className="mt-6 font-montserrat text-base leading-7 text-white-400 sm:max-w-sm">
             Get shoes ready for the new term at your nearest Nike store. Find
             Your perfect Size In Store. Get Rewards
-          </p>
+          </p> */}
           <div className="mt-8 flex items-center gap-5">
             {socialMedia.map((icon) => (
               <div

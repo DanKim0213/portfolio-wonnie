@@ -1,15 +1,16 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { ShoeCard } from '../components/index'
+import { ShoeCard } from "../components/index";
 import { BiAlignLeft } from "react-icons/bi";
+import { useClickAway } from "react-use";
 
-const Modal = ({ isOpen, onClose, disabled, screenshots, title }) => {
-  const [thumbnail, setThumbnail] = useState(screenshots[0].thumbnail)
+const Modal = ({ isOpen, onClose, disabled, project, title }) => {
+  const [thumbnail, setThumbnail] = useState(project.product[0].thumbnail);
   const [showModal, setShowModal] = useState(isOpen);
-  
+
   useEffect(() => {
-    setThumbnail(screenshots[0].thumbnail);
-  }, [screenshots])
+    setThumbnail(project.product[0].thumbnail);
+  }, [project]);
 
   useEffect(() => {
     setShowModal(isOpen);
@@ -19,135 +20,150 @@ const Modal = ({ isOpen, onClose, disabled, screenshots, title }) => {
     if (disabled) {
       return;
     }
-  
+
     setShowModal(false);
     setTimeout(() => {
       onClose();
-    }, 300)
+    }, 300);
   }, [onClose, disabled]);
+
+  const ref = useRef(null);
+  useClickAway(ref, () => handleClose());
 
   if (!isOpen) {
     return null;
   }
 
   return (
-    <>
+    <div
+      className="
+        fixed inset-0 z-50 
+        flex items-center 
+        justify-center overflow-y-auto overflow-x-hidden 
+        bg-neutral-800/70 
+        outline-none
+        focus:outline-none
+      "
+    >
       <div
+        ref={ref}
         className="
-          flex justify-center items-center 
-          overflow-x-hidden overflow-y-auto 
-          fixed inset-0 z-50 
-          outline-none 
-          focus:outline-none
-          bg-neutral-800/70
+        relative 
+        mx-auto
+        my-6
+        h-full
+        w-full
+        md:h-auto
+        md:w-4/6 
+        lg:h-auto 
+        lg:w-3/6
+        xl:w-2/5
         "
       >
-        <div className="
-          relative 
-          w-full
-          md:w-4/6
-          lg:w-3/6
-          xl:w-2/5
-          my-6
-          mx-auto 
-          h-full 
-          lg:h-auto
-          md:h-auto
-          "
+        {/*content*/}
+        <div
+          className={`
+          translate
+          h-full
+          duration-300
+          ${showModal ? "translate-y-0" : "translate-y-full"}
+          ${showModal ? "opacity-100" : "opacity-0"}
+        `}
         >
-          {/*content*/}
-          <div className={`
+          <div
+            className="
             translate
-            duration-300
+            relative
+            flex
             h-full
-            ${showModal ? 'translate-y-0' : 'translate-y-full'}
-            ${showModal ? 'opacity-100' : 'opacity-0'}
-          `}>
-            <div className="
-              translate
-              h-full
-              lg:h-auto
-              md:h-auto
-              border-0 
-              rounded-lg 
-              shadow-lg 
+            w-full 
+            flex-col 
+            rounded-lg 
+            border-0 
+            bg-white 
+            shadow-lg 
+            outline-none 
+            focus:outline-none 
+            md:h-auto 
+            lg:h-auto
+          "
+          >
+            {/*header*/}
+            <div
+              className="
               relative 
               flex 
-              flex-col 
-              w-full 
-              bg-white 
-              outline-none 
-              focus:outline-none
-            "
+              items-center
+              justify-center
+              rounded-t
+              border-b-[1px]
+              p-6
+              "
             >
-              {/*header*/}
-              <div className="
-                flex 
-                items-center 
-                p-6
-                rounded-t
-                justify-center
-                relative
-                border-b-[1px]
+              <button
+                className="
+                  absolute
+                  left-9 
+                  border-0
+                  p-1
+                  transition
+                  hover:opacity-70
                 "
+                onClick={handleClose}
               >
-                <button
-                  className="
-                    p-1
-                    border-0 
-                    hover:opacity-70
-                    transition
-                    absolute
-                    left-9
-                  "
-                  onClick={handleClose}
-                >
-                  <IoMdClose size={18} />
-                </button>
-                <div className="text-lg font-semibold">
-                  {title}
-                </div>
-              </div>
-              {/*body*/}
-              <div className="relative p-6 pb-20 flex-auto">
-                <div className="relative flex justify-center bg-primary bg-hero bg-cover bg-center py-10 px-1 h-[75vh]">
-                  <div className="absolute top-4 right-4 rounded-full shadow-xl bg-white p-2 group hover:rounded-xl hover:p-4 ">
-                    <BiAlignLeft size={24} className="group-hover:hidden text-slate-gray hover:cursor-pointer" />
-                    <div className="group-hover:block hidden text-slate-gray">
-                    <p>
-                      (한글 소개) Experience top-notch quality and style with our sought-after selections. Discover a world of comfort, design, and value
-                    </p>
-                      <a className="rounded-full px-4 py-2 bg-coral-red no-underline text-white transition hover:shadow-xl" 
-                        href="https://github.com/dankim0213" 
-                        target="_blank" rel="noreferrer">
-                          보러가기
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src={thumbnail}
-                    alt="shoe colletion"
-                    className="object-contain w-[100%] h-[100%]"
+                <IoMdClose size={18} />
+              </button>
+              <div className="text-lg font-semibold">{title}</div>
+            </div>
+            {/*body*/}
+            <div className="relative flex-auto p-6 pb-20">
+              <div className="relative flex h-[75vh] justify-center bg-primary bg-hero bg-cover bg-center px-1 py-10">
+                <div className="group absolute right-4 top-4 rounded-full bg-white p-2 shadow-xl hover:rounded-xl hover:p-4 ">
+                  <BiAlignLeft
+                    size={24}
+                    className="text-slate-gray hover:cursor-pointer group-hover:hidden"
                   />
-                  <div className="absolute -bottom-[10%] flex gap-4">
-                    {screenshots.map((image, index) => (
-                      <ShoeCard
-                        key={index}
-                        index={index}
-                        imgURL={image}
-                        changeBigShoeImage={(shot) => setThumbnail(shot)}
-                        bigShoeImg={thumbnail}
-                      />
-                    ))}
+                  <div className="hidden text-slate-gray group-hover:block">
+                    <div className="mb-4">
+                      {project.desc.map((paragraph, idx) => (
+                        <p className="break-keep" key={idx}>
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                    <a
+                      className="rounded-full bg-coral-red px-4 py-2 text-white no-underline transition hover:shadow-xl"
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      보러가기
+                    </a>
                   </div>
+                </div>
+                <img
+                  src={thumbnail}
+                  alt="shoe colletion"
+                  className="h-[100%] w-[100%] object-contain"
+                />
+                <div className="absolute -bottom-[10%] flex gap-4">
+                  {project.product.map((image, index) => (
+                    <ShoeCard
+                      key={index}
+                      index={index}
+                      imgURL={image}
+                      changeBigShoeImage={(shot) => setThumbnail(shot)}
+                      bigShoeImg={thumbnail}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default Modal;

@@ -12,7 +12,7 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
     >
       <div
         className={`rounded-xl ring-inset ring-coral-red ${
-          bigShoeImg === imgURL.id && "ring-2"
+          bigShoeImg === imgURL.thumbnail && "ring-2"
         } h-[20vw] w-[20vw] cursor-pointer bg-card bg-cover bg-center p-4 lg:h-40 lg:w-40`}
       >
         <img
