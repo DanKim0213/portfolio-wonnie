@@ -16,5 +16,3 @@ const ServiceCard = ({ imgURL, label, subtext }) => {
 };
 
 export default ServiceCard;
-
-// TODO: 1 card -> 2 cards -> 3 cards by `w-full min-w-[350px]`

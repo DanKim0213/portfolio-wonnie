@@ -25,15 +25,3 @@ const Subscribe = () => {
 };
 
 export default Subscribe;
-
-// TODO: when `flex-col`, automatically w-full.  When `flex-row`, it also w-full.
-// TODO: `flex-1` is affected by `flex-direction`.
-// TODO: flex + `align-items` 하면 width 가 생긴다
-/*
-
-      <div className="flex h-40 ">
-        <div className="flex-1 rounded-xl border border-red-300">hi</div>
-        <div className="flex-[2] rounded-xl border border-blue-300">yo</div>
-        <div className="rounded-xl border border-green-300">hello</div>
-      </div>
-*/

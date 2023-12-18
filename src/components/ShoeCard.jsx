@@ -26,7 +26,3 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
 };
 
 export default ShoeCard;
-
-/*
- * TODO: div.bg > img 로 사이즈 조정하자
- */

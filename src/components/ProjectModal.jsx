@@ -14,6 +14,18 @@ const Modal = ({ isOpen, onClose, disabled, project, title }) => {
 
   useEffect(() => {
     setShowModal(isOpen);
+
+    // Add or remove the 'modal-open' class on the body based on the modal's open state
+    if (isOpen) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
   }, [isOpen]);
 
   const handleClose = useCallback(() => {

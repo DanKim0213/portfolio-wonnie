@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { projects } from "../constants";
 import { PopularProductCard } from "../components";
 import Modal from "../components/ProjectModal";
@@ -10,20 +9,6 @@ const PopularProducts = () => {
   const [isOpen, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
   const openModal = () => setOpen(true);
-
-  useEffect(() => {
-    // Add or remove the 'modal-open' class on the body based on the modal's open state
-    if (isOpen) {
-      document.body.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-    }
-
-    // Cleanup on unmount
-    return () => {
-      document.body.classList.remove("modal-open");
-    };
-  }, [isOpen]);
 
   return (
     <section id="projects">

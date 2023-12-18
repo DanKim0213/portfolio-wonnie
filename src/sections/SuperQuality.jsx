@@ -84,11 +84,3 @@ const SuperQuality = () => {
 };
 
 export default SuperQuality;
-
-/*
- * TODO: img tag's width & height 어떻게 처리하나? block tag의 max를 정해도 내부 el의 크기가 크면 뻗어나갈텐데?
- *
- * `object-fit: contain` maintaines its aspect ratio
- *
- * TODO: website width를 300px 로 줄일수 잇을까?
- */
