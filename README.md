@@ -131,6 +131,8 @@ css를 수정하는 과정에서 tailwindcss에 대해 새로 배운 내용이 �
 html 예시 코드:
 ![flex-1 code](./public/flex-1-example4.png)
 
+이제 github 페이지에 depoly해보자.
+
 </details>
 
 ## 아쉬운 점
