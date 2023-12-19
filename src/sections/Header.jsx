@@ -44,6 +44,8 @@ const Header = () => {
           <a
             href="https://github.com/dankim0213"
             className="hover:text-coral-red"
+            target="_blank"
+            rel="noreferrer"
           >
             <BiLogoGithub size={40} />
           </a>

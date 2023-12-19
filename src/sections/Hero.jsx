@@ -76,7 +76,7 @@ const readme = (
 const Hero = () => {
   return (
     <div id="home" className="mx-auto flex max-w-[1440px] flex-col xl:flex-row">
-      <section className="flex min-h-screen flex-1 flex-col items-start justify-center ">
+      <section className="flex h-[100dvh] flex-col items-start justify-center xl:flex-1 ">
         <p className="mt-4 font-montserrat text-xl text-coral-red">
           Hello, World!
         </p>
@@ -93,8 +93,8 @@ const Hero = () => {
           프론트엔드 개발자 김태원입니다 👋
         </p>
       </section>
-      <section className="flex min-h-screen w-full flex-1 items-center justify-center bg-primary text-xl">
-        <div>{readme}</div>
+      <section className="mx-0 flex h-[100dvh] items-center justify-center bg-primary text-xl xl:flex-1">
+        {readme}
       </section>
     </div>
   );
