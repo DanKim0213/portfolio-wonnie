@@ -23,6 +23,8 @@ import {
   toonbti2,
   toonbti3,
   portfolio1,
+  portfolio2,
+  portfolio3,
 } from "../assets/images";
 
 export const navLinks = [
@@ -50,15 +52,15 @@ export const days = [
 export const portfolio = [
   {
     id: "portfolio1",
-    thumbnail: toonbti1,
+    thumbnail: portfolio1,
   },
   {
     id: "portfolio2",
-    thumbnail: toonbti1,
+    thumbnail: portfolio2,
   },
   {
     id: "portfolio3",
-    thumbnail: toonbti1,
+    thumbnail: portfolio3,
   },
 ];
 

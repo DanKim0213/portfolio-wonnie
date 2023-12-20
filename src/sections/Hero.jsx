@@ -27,7 +27,7 @@ const readme = (
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;
     <TypeAnimation
-      className="text-base sm:text-xl"
+      className="text-base max-[350px]:text-sm sm:text-xl"
       sequence={[
         // Same substring at the start will only be typed once, initially
         "who likes to talk about why-not",
@@ -94,7 +94,7 @@ const Hero = () => {
           프론트엔드 개발자 김태원입니다 👋
         </p>
       </section>
-      <section className="mx-0 flex h-[100dvh] items-center justify-center bg-primary text-base sm:text-xl xl:flex-1">
+      <section className="mx-0 flex h-[100dvh] items-center justify-center bg-primary text-sm max-sm:px-0 min-[350px]:text-base sm:text-xl xl:flex-1">
         {readme}
       </section>
     </div>
