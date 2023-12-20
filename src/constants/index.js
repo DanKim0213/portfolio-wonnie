@@ -22,6 +22,7 @@ import {
   toonbti1,
   toonbti2,
   toonbti3,
+  portfolio1,
 } from "../assets/images";
 
 export const navLinks = [
@@ -43,6 +44,21 @@ export const days = [
   {
     id: "days3",
     thumbnail: days3,
+  },
+];
+
+export const portfolio = [
+  {
+    id: "portfolio1",
+    thumbnail: toonbti1,
+  },
+  {
+    id: "portfolio2",
+    thumbnail: toonbti1,
+  },
+  {
+    id: "portfolio3",
+    thumbnail: toonbti1,
   },
 ];
 
@@ -99,6 +115,24 @@ export const statistics = [
 
 export const projects = [
   {
+    imgURL: portfolio1,
+    name: "Wonnie",
+    price: "포트폴리오",
+    product: portfolio,
+    stars: 4,
+    desc: [
+      "나의 역할:\n",
+      "- 나이키 랜딩 페이지를 바탕으로 나만의 포트폴리오 웹사이트를 만듦\n",
+      "- 스티키 헤더 추가\n",
+      "- 불필요한 css 줄이기\n",
+      "- 프로젝트 보여주기용 모달 추가\n",
+      "- 햄버거 메뉴 추가\n",
+      "- 서비스 섹션 오류 수정\n",
+      "- 반응형 디자인을 모바일까지 포함하여 개선\n",
+    ],
+    url: "https://github.com/DanKim0213/portfolio-wonnie",
+  },
+  {
     imgURL: toonbti1,
     name: "TooNBTI",
     price: "웹툰 취향 MBTI",
@@ -145,21 +179,6 @@ export const projects = [
       " - 프론트엔드 개발자들의 코드 리뷰를 진행",
     ],
     url: "https://github.com/DanKim0213/66days/tree/main",
-  },
-  {
-    imgURL: auctopus1,
-    name: "Auctopus2",
-    price: "중고거래 플랫폼",
-    product: auctopus,
-    stars: 3.5,
-    desc: [
-      "나의 역할:",
-      "- Web Socket을 활용하여 채팅 구현",
-      "- 카카오 계정을 활용하여 소셜 로그인 구현",
-      "- TypeScript를 프로젝트에 적극 도입하길 추천했고 팀원들과 스터디 주도",
-      "- Git으로 프로젝트 관리 담당",
-    ],
-    url: "https://github.com/DanKim0213/Auctopus",
   },
 ];
 

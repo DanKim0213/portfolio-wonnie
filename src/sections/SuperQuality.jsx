@@ -70,12 +70,12 @@ const SuperQuality = () => {
           <img
             src="https://github-readme-stats.vercel.app/api?username=dankim0213&hide_rank=true&title_color=FF6452"
             alt="product detail"
-            className="w-2/3 object-contain "
+            className="w-full object-contain sm:w-2/3 "
           />
           <img
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=dankim0213&layout=compact&hide=java&title_color=FF6452"
             alt="product detail"
-            className="w-2/3 object-contain "
+            className="w-full object-contain sm:w-2/3 "
           />
         </div>
       </section>

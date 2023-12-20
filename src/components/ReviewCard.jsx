@@ -1,14 +1,15 @@
-
 const ReviewCard = ({ imgURL, customerName, feedback }) => {
   return (
-    <div className='flex justify-center items-center flex-col'>
+    <div className="flex flex-col items-center justify-center">
       <img
         src={imgURL}
-        alt='customer'
-        className='rounded-full object-cover w-[120px] h-[120px]'
+        alt="customer"
+        className="h-[120px] w-[120px] rounded-full object-cover"
       />
-      <p className='mt-6 max-w-sm text-center info-text'>{feedback}</p>
-      <h3 className='mt-1 font-palanquin info-text text-center font-bold'>
+      <p className="info-text mt-6 max-w-sm break-keep text-center">
+        {feedback}
+      </p>
+      <h3 className="info-text mt-1 text-center font-palanquin font-bold">
         {customerName}
       </h3>
     </div>

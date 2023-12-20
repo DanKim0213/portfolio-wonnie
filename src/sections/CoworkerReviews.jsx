@@ -9,9 +9,9 @@ const CoworkerReviews = () => {
         <span className="text-coral-red"> Coworkers </span>
         Say?
       </h3>
-      <p className="info-text m-auto mt-4 text-center">
+      <p className="info-text m-auto mt-4 break-keep text-center">
         저와 함께 프론트엔드 개발자로서 <br />
-        2023년을 같이 고생한 SSAFY 동료들의 리뷰입니다.   
+        2023년을 같이 고생한 SSAFY 동료들의 리뷰입니다.
       </p>
 
       <div className="mt-24 flex flex-col items-center justify-evenly gap-14 lg:flex-row">

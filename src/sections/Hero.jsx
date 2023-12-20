@@ -27,6 +27,7 @@ const readme = (
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#34;
     <TypeAnimation
+      className="text-base sm:text-xl"
       sequence={[
         // Same substring at the start will only be typed once, initially
         "who likes to talk about why-not",
@@ -35,7 +36,7 @@ const readme = (
         1000,
       ]}
       speed={50}
-      style={{ fontSize: "20px", lineHeight: "24.38px" }}
+      // style={{ fontSize: "20px", lineHeight: "24.38px" }}
       repeat={Infinity}
     />
     &#34;,
@@ -80,12 +81,12 @@ const Hero = () => {
         <p className="mt-4 font-montserrat text-xl text-coral-red">
           Hello, World!
         </p>
-        <h1 className="mt-10 font-palanquin text-8xl font-bold">
+        <h1 className="mt-10 font-palanquin text-4xl font-bold sm:text-8xl">
           Frontend Developer
           <br />
           <span className="text-coral-red">Wonnie</span>
         </h1>
-        <p className="mt-6 max-w-sm font-montserrat text-2xl leading-8 text-slate-gray ">
+        <p className="mt-6 max-w-sm break-keep font-montserrat text-xl leading-8 text-slate-gray sm:text-2xl ">
           변치않는 꾸준함으로
           <br />
           변하는 세상에 적응하는
@@ -93,7 +94,7 @@ const Hero = () => {
           프론트엔드 개발자 김태원입니다 👋
         </p>
       </section>
-      <section className="mx-0 flex h-[100dvh] items-center justify-center bg-primary text-xl xl:flex-1">
+      <section className="mx-0 flex h-[100dvh] items-center justify-center bg-primary text-base sm:text-xl xl:flex-1">
         {readme}
       </section>
     </div>
